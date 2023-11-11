@@ -102,9 +102,9 @@ async def analitika(db: Session = Depends(get_db)):
     return result
 
 
-@app.get("/exel/")
-async def exel():
-    filename = "Dataset.xlsx"
+@app.get("/exel_analitika/")
+async def exel_analitika():
+    filename = "аналитика_выгрузка_файл.xlsx"
     return FileResponse(filename, media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                         filename=filename)
 
