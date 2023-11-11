@@ -115,11 +115,13 @@ async def exel_append(file: UploadFile = File(...)):
             buffer.write(file.file.read())
         if append_from_exel(file.filename) == 'success':
             #os.remove(file.filename)
+
             algoritm()
             to_bd_day_tasks()
             to_bd_timesheet()
             to_bd_workers()
             return {"message": "success"}
+
 
         else:
             os.remove(file.filename)
