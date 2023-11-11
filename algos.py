@@ -8,7 +8,7 @@ from scipy.optimize import linear_sum_assignment
 def get_kords(address='Москва, Ленинские горы, 1'):
 
     response = get('https://geocode-maps.yandex.ru/1.x/',
-                       params={'apikey': 'e9811529-a9cc-4927-aa13-cebe9ea373bb',
+                       params={'apikey': 'c320b927-84f6-44f7-80d6-3283ede7cbe4',
                                'format': 'json',
                                'geocode': address}).json()
 
@@ -154,7 +154,7 @@ def algoritm():
     def get_geocode(address='Москва, Ленинские горы, 1'):
         if address not in geocodes:
             response = get('https://geocode-maps.yandex.ru/1.x/',
-                           params={'apikey': 'e9811529-a9cc-4927-aa13-cebe9ea373bb',
+                           params={'apikey': 'c320b927-84f6-44f7-80d6-3283ede7cbe4',
                                    'format': 'json',
                                    'geocode': address}).json()
 
